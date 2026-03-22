@@ -14,7 +14,6 @@
   .container { max-width: 860px; margin: 0 auto; padding: 40px 20px; }
   .section { background: #13132A; border-radius: 12px; padding: 28px; margin-bottom: 24px; border-left: 4px solid #6C63FF; }
   .section h2 { color: #FFFFFF; font-size: 18px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
-  .section h2 .icon { font-size: 20px; }
   .section p { color: #CCCCEE; margin-bottom: 12px; font-size: 15px; }
   .section ul { padding-left: 20px; margin-bottom: 12px; }
   .section ul li { color: #CCCCEE; margin-bottom: 8px; font-size: 15px; }
@@ -25,7 +24,6 @@
   .contact-box { background: linear-gradient(135deg, #13132A, #1a1a3a); border: 1px solid #6C63FF; border-radius: 12px; padding: 24px; text-align: center; margin-top: 32px; }
   .contact-box h3 { color: #FFFFFF; margin-bottom: 10px; }
   .contact-box a { color: #6C63FF; text-decoration: none; }
-  .contact-box a:hover { color: #9D97FF; }
   .footer { text-align: center; padding: 30px 20px; color: #666688; font-size: 13px; border-top: 1px solid #13132A; margin-top: 20px; }
   a { color: #6C63FF; }
   @media (max-width: 600px) { .header h1 { font-size: 22px; } .section { padding: 20px; } }
@@ -43,145 +41,142 @@
 
   <div class="section">
     <div class="badge">OVERVIEW</div>
-    <h2><span class="icon">📋</span> Introduction</h2>
-    <p>Welcome to HTG TurboX ("the App"), developed by Hi Tech Gamerz ("we", "our", "us"). This Privacy Policy explains how we collect, use, disclose, and protect information when you use our Android application.</p>
-    <p>By downloading or using HTG TurboX, you agree to the terms described in this policy. If you disagree with any part, please discontinue use of the App.</p>
-    <div class="highlight"><p>🔒 HTG TurboX is designed with privacy in mind. We do not sell your personal data to third parties.</p></div>
+    <h2>📋 Introduction</h2>
+    <p>Welcome to HTG TurboX ("the App"), developed by Hi Tech Gamerz ("we", "our", "us"). This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our Android application.</p>
+    <p>By downloading, installing, or using HTG TurboX, you agree to the collection and use of information in accordance with this policy. If you do not agree with this policy, please do not use the App.</p>
+    <div class="highlight"><p>🔒 HTG TurboX is designed with privacy in mind. We do not sell your personal data to any third party. All device data is processed locally on your device and is never transmitted to our servers.</p></div>
   </div>
 
   <div class="section">
-    <h2><span class="icon">📊</span> Information We Collect</h2>
+    <h2>📊 Information We Collect</h2>
 
-    <p><strong style="color:#fff">1. Device Information (Collected Automatically)</strong></p>
+    <p><strong style="color:#fff">1. Device Information (Processed Locally — Never Transmitted)</strong></p>
     <ul>
-      <li>Device model, manufacturer, and brand (used to show device-specific optimization tips)</li>
-      <li>Android OS version (used to show version-appropriate developer options)</li>
-      <li>RAM usage, storage status, and battery level (read locally, never transmitted)</li>
-      <li>Installed applications list (used only for App Manager and Game Booster features, processed on-device only)</li>
+      <li>Device model, manufacturer, and Android version — used to show device-specific optimization instructions</li>
+      <li>RAM usage and available memory — displayed to you in real-time, never stored or sent anywhere</li>
+      <li>Storage space and battery status — shown in the app dashboard only</li>
+      <li>Installed applications list — used exclusively for the App Manager and Game Booster features. This data never leaves your device.</li>
     </ul>
 
-    <p><strong style="color:#fff">2. Usage Data (via Google AdMob)</strong></p>
+    <p><strong style="color:#fff">2. Token & Reward Data (Stored Locally on Your Device Only)</strong></p>
     <ul>
-      <li>Advertising ID (used by Google AdMob to serve relevant ads)</li>
-      <li>App interaction data (ad impressions, clicks — collected by AdMob)</li>
-      <li>Approximate location (country-level only, used by AdMob for geo-targeted ads)</li>
+      <li>Token balance, daily earn count, bonus claim status, and share records are stored using Android SharedPreferences on your device only</li>
+      <li>This data is never transmitted to our servers and no account system exists</li>
+      <li>When you voluntarily submit a reward redemption request via email, your email address and token count are shared directly with us through your email app</li>
     </ul>
 
-    <p><strong style="color:#fff">3. Token Reward Data (Stored Locally)</strong></p>
+    <p><strong style="color:#fff">3. App Preferences (Stored Locally)</strong></p>
     <ul>
-      <li>Token balance, daily earn count, and reward history are stored only on your device using Android SharedPreferences</li>
-      <li>This data is never transmitted to our servers</li>
+      <li>Gaming mode settings (DND, screen on preferences) stored locally</li>
+      <li>Manually added games list stored on your device</li>
+      <li>Notification permission status and first-launch flags stored locally</li>
     </ul>
 
-    <p><strong style="color:#fff">4. Redemption Requests (User-Initiated Only)</strong></p>
+    <p><strong style="color:#fff">4. Information We Do NOT Collect</strong></p>
     <ul>
-      <li>When you submit a token redemption request, your email app sends us your email address and token balance</li>
-      <li>This information is only used to process your Google Play gift coupon request</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2><span class="icon">🔧</span> App Permissions Explained</h2>
-    <ul>
-      <li><strong>INTERNET</strong> — Required to load advertisements via Google AdMob and for network speed testing</li>
-      <li><strong>ACCESS_NETWORK_STATE</strong> — Checks internet connectivity before loading ads or running network tests</li>
-      <li><strong>QUERY_ALL_PACKAGES</strong> — Required to display your installed apps in the App Manager and detect games in Game Booster. No app data leaves your device.</li>
-      <li><strong>ACCESS_NOTIFICATION_POLICY</strong> — Used for the Do Not Disturb feature in Game Booster, only when you explicitly enable it</li>
-      <li><strong>WAKE_LOCK</strong> — Keeps screen on during gaming when "Keep Screen On" is enabled by you</li>
-      <li><strong>POST_NOTIFICATIONS</strong> — Sends you optional reminders to clean RAM or boost performance. Can be disabled anytime in Android Settings → Apps → HTG TurboX → Notifications</li>
-      <li><strong>RECEIVE_BOOT_COMPLETED</strong> — Reschedules notification reminders after device restart</li>
-      <li><strong>REQUEST_DELETE_PACKAGES</strong> — Enables the uninstall button in App Manager (opens Android's standard uninstall dialog)</li>
-      <li><strong>WRITE_SETTINGS</strong> — Used to adjust screen brightness and display settings in the Tweaks section</li>
+      <li>We do not collect your name, email, phone number, or any personal identifiers</li>
+      <li>We do not collect location data</li>
+      <li>We do not use analytics SDKs or crash reporting tools</li>
+      <li>We do not use any advertising SDKs or ad networks</li>
+      <li>We do not track user behaviour or usage patterns on our servers</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2><span class="icon">📢</span> Advertising (Google AdMob)</h2>
-    <p>HTG TurboX uses Google AdMob to display advertisements. AdMob may collect and use data to serve personalized ads based on your interests.</p>
-    <p>Ad formats used in the App:</p>
+    <h2>🔧 App Permissions Explained</h2>
+    <p>HTG TurboX requests only the permissions necessary for its core features. Here is what each permission does:</p>
     <ul>
-      <li><strong>Rewarded Ads</strong> — Optional videos you choose to watch to unlock features or earn tokens</li>
-      <li><strong>Rewarded Interstitial Ads</strong> — Full-screen ads shown as a fallback when rewarded ads are unavailable</li>
-      <li><strong>Interstitial Ads</strong> — Full-screen ads shown between actions (e.g., before launching a game)</li>
-    </ul>
-    <div class="highlight">
-      <p>To opt out of personalized ads: Go to your device <strong>Settings → Google → Ads → Opt out of Ads Personalization</strong></p>
-    </div>
-    <p>For more information, review Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
-    <p>Google AdMob Privacy: <a href="https://support.google.com/admob/answer/6128543" target="_blank">https://support.google.com/admob/answer/6128543</a></p>
-  </div>
-
-  <div class="section">
-    <h2><span class="icon">🪙</span> Token Reward System</h2>
-    <p>HTG TurboX includes a token-based reward system. Here is how your data is handled:</p>
-    <ul>
-      <li>All token balances and earn history are stored <strong>only on your device</strong></li>
-      <li>Token rewards are earned by using app features, watching ads, daily logins, and sharing the app</li>
-      <li>Redemption requests (at 10,000 tokens) are submitted voluntarily via your email app and include only your email address and token count</li>
-      <li>We do not track token data on any server — there is no account system</li>
+      <li><strong>INTERNET</strong> — Required for the Network Check feature (ping test to external servers) and WorkManager background scheduling</li>
+      <li><strong>ACCESS_NETWORK_STATE</strong> — Checks whether the device has an active internet connection before running the network test</li>
+      <li><strong>WAKE_LOCK</strong> — Keeps the screen on while HTG TurboX is the active foreground app, when enabled by the user in Game Booster settings</li>
+      <li><strong>ACCESS_NOTIFICATION_POLICY</strong> — Enables the Do Not Disturb feature in Game Booster. Only activated when the user explicitly enables it and grants permission</li>
+      <li><strong>POST_NOTIFICATIONS</strong> — Sends periodic reminders to clean RAM and optimize the phone. Only used after the user grants permission. Can be revoked anytime via Android Settings</li>
+      <li><strong>RECEIVE_BOOT_COMPLETED</strong> — Reschedules WorkManager notification reminders after the device restarts so notifications continue working</li>
+      <li><strong>REQUEST_DELETE_PACKAGES</strong> — Opens Android's standard system uninstall dialog when a user taps uninstall in the App Manager. We do not uninstall apps programmatically</li>
+      <li><strong>QUERY_ALL_PACKAGES</strong> — Required on Android 11 and above to display the list of installed apps in App Manager and to detect installed games in Game Booster. No app data is transmitted or stored externally. This permission is used solely to provide the core features of the App.</li>
+      <li><strong>READ_EXTERNAL_STORAGE / WRITE_EXTERNAL_STORAGE</strong> — Legacy permissions limited to Android 9 and below (maxSdkVersion 29/32). Not used on modern Android versions.</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2><span class="icon">🔔</span> Notifications</h2>
-    <p>HTG TurboX sends periodic reminder notifications to encourage phone optimization. These notifications:</p>
+    <h2>🪙 Token Reward System & Data</h2>
+    <p>HTG TurboX includes a token-based reward system. Here is exactly how data is handled:</p>
     <ul>
-      <li>Are scheduled locally using Android WorkManager</li>
-      <li>Do not involve any external server</li>
-      <li>Can be disabled anytime: <strong>Settings → Apps → HTG TurboX → Notifications → Turn Off</strong></li>
-      <li>On Android 13+, you will be asked for permission before any notification is sent</li>
+      <li>All token data (balance, daily counts, claim history) is stored only on your device using Android SharedPreferences</li>
+      <li>No token data is transmitted to any server — there is no backend, no database, and no user accounts</li>
+      <li>Reward redemption (at 10,000 tokens) is a fully voluntary action — you initiate it by tapping a button which opens your own email app with a pre-filled message. The only data sent is what you choose to send through your email.</li>
+      <li>Redemption verification uses a code you include in your email — we do not access your device or account to verify it</li>
+    </ul>
+    <div class="highlight"><p>ℹ️ The reward offered is a promotional gift voucher/coupon at our discretion. It is not affiliated with or endorsed by any third-party platform.</p></div>
+  </div>
+
+  <div class="section">
+    <h2>🔔 Notifications</h2>
+    <p>HTG TurboX sends periodic local notifications reminding you to optimize your phone. About these notifications:</p>
+    <ul>
+      <li>All notifications are scheduled and delivered entirely on your device using Android WorkManager — no server is involved</li>
+      <li>Notifications fire approximately every 3 hours when your phone is active</li>
+      <li>On Android 13 and above, you are asked for permission before any notification is sent</li>
+      <li>You can disable notifications at any time: <strong>Settings → Apps → HTG TurboX → Notifications → Turn Off</strong></li>
+      <li>Tapping a notification opens the app and executes the relevant optimization feature</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2><span class="icon">👦</span> Children's Privacy</h2>
-    <p>HTG TurboX is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
-    <p>If you believe a child under 13 has provided us with personal information, please contact us immediately at <a href="mailto:Krishnakantasharma297@gmail.com">Krishnakantasharma297@gmail.com</a> and we will take steps to delete such information.</p>
+    <h2>👦 Children's Privacy</h2>
+    <p>HTG TurboX is not directed at children under the age of 13. We do not knowingly collect any personal information from children under 13. The App does not contain content inappropriate for children, but it is intended for general audiences aged 13 and above.</p>
+    <p>If you believe that a child under 13 has provided any personal information through the reward redemption email, please contact us immediately at <a href="mailto:Krishnakantasharma297@gmail.com">Krishnakantasharma297@gmail.com</a> and we will take appropriate steps.</p>
   </div>
 
   <div class="section">
-    <h2><span class="icon">🌍</span> Data Storage & Security</h2>
-    <p>HTG TurboX does not operate any backend servers or databases. All app data (settings, tokens, preferences) is stored locally on your device using Android's built-in storage systems (SharedPreferences).</p>
-    <p>We do not transfer your data internationally. The only data that leaves your device is what Google AdMob collects for advertising purposes, as described above.</p>
-  </div>
-
-  <div class="section">
-    <h2><span class="icon">🔗</span> Third-Party Services</h2>
-    <p>The App integrates with the following third-party services:</p>
+    <h2>🌍 Data Storage and Security</h2>
+    <p>HTG TurboX does not operate any backend servers or cloud databases. All app data is stored exclusively on your device using Android's built-in secure storage (SharedPreferences). No user data is transmitted internationally or stored outside your device.</p>
+    <p>The only external communication the App makes is:</p>
     <ul>
-      <li><strong>Google AdMob</strong> — Advertising network. <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
-      <li><strong>Google Play Services</strong> — Required for AdMob and core Android functionality. <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
-      <li><strong>AndroidX WorkManager</strong> — Used for background notification scheduling. No data collection.</li>
+      <li>Network ping tests to public servers (google.com, cloudflare.com, 8.8.8.8) initiated by you in the Network Check feature</li>
+      <li>WorkManager background scheduling (device-local only)</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2><span class="icon">⚖️</span> Your Rights</h2>
-    <p>Depending on your location, you may have rights regarding your personal data:</p>
+    <h2>🔗 Third-Party Services</h2>
+    <p>HTG TurboX does not currently integrate any third-party advertising SDKs, analytics platforms, or tracking services. The App operates as a fully self-contained local application.</p>
+    <p>The following system-level Android services are used:</p>
     <ul>
-      <li><strong>Access</strong> — You can view all locally stored data through your device's App Info screen</li>
-      <li><strong>Deletion</strong> — Clear app data anytime via Settings → Apps → HTG TurboX → Clear Data (this resets all tokens and settings)</li>
-      <li><strong>Opt-out of ads</strong> — Disable personalized ads via Google Settings on your device</li>
-      <li><strong>Notification control</strong> — Disable notifications via Android notification settings</li>
+      <li><strong>AndroidX WorkManager</strong> — Background task scheduling for notifications. No data collection. <a href="https://developer.android.com/topic/libraries/architecture/workmanager" target="_blank">Documentation</a></li>
+      <li><strong>Android System APIs</strong> — ActivityManager, BatteryManager, StatFs — used to read device stats. All data stays on-device.</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2><span class="icon">📝</span> Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last Updated" date. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
-    <p>We encourage you to review this page periodically.</p>
+    <h2>⚖️ Your Rights and Choices</h2>
+    <ul>
+      <li><strong>Access your data</strong> — All data is on your device. Go to Settings → Apps → HTG TurboX → Storage to see storage usage</li>
+      <li><strong>Delete your data</strong> — Settings → Apps → HTG TurboX → Clear Data. This resets all tokens, preferences, and settings permanently</li>
+      <li><strong>Revoke permissions</strong> — Settings → Apps → HTG TurboX → Permissions — revoke any permission at any time</li>
+      <li><strong>Disable notifications</strong> — Settings → Apps → HTG TurboX → Notifications → Turn Off</li>
+      <li><strong>Uninstall</strong> — Uninstalling the App removes all locally stored data permanently</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📝 Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last Updated" date at the top of this page. We encourage you to review this page periodically.</p>
+    <p>Continued use of the App after changes are posted constitutes your acceptance of the updated policy.</p>
   </div>
 
   <div class="contact-box">
     <h3>📬 Contact Us</h3>
-    <p style="color:#CCCCEE; margin: 10px 0;">If you have any questions about this Privacy Policy, please contact us:</p>
-    <p style="margin: 6px 0;"><strong style="color:#fff">Email:</strong> <a href="mailto:Krishnakantasharma297@gmail.com">Krishnakantasharma297@gmail.com</a></p>
-    <p style="margin: 6px 0;"><strong style="color:#fff">YouTube:</strong> <a href="https://www.youtube.com/@hitechgamerzyt" target="_blank">Hi Tech Gamerz</a></p>
+    <p style="color:#CCCCEE; margin:10px 0;">For any questions or concerns about this Privacy Policy:</p>
+    <p style="margin:6px 0;"><strong style="color:#fff">Email:</strong> <a href="mailto:Krishnakantasharma297@gmail.com">Krishnakantasharma297@gmail.com</a></p>
+    <p style="margin:6px 0;"><strong style="color:#fff">YouTube:</strong> <a href="https://www.youtube.com/@hitechgamerzyt" target="_blank">Hi Tech Gamerz</a></p>
+    <p style="margin:6px 0;"><strong style="color:#fff">Channel 2:</strong> <a href="https://youtube.com/@scriptotweaks" target="_blank">Scripto Tweaks</a></p>
   </div>
 
   <div class="footer">
     <p>© 2026 Hi Tech Gamerz. All rights reserved.</p>
-    <p style="margin-top: 6px;">HTG TurboX — Phone Optimizer &amp; Game Booster</p>
+    <p style="margin-top:6px;">HTG TurboX — Phone Optimizer &amp; Game Booster</p>
+    <p style="margin-top:6px;"><a href="terms.html">Terms of Service</a></p>
   </div>
 
 </div>
