@@ -14,12 +14,15 @@
   .container { max-width: 860px; margin: 0 auto; padding: 40px 20px; }
   .section { background: #13132A; border-radius: 12px; padding: 28px; margin-bottom: 24px; border-left: 4px solid #6C63FF; }
   .section h2 { color: #FFFFFF; font-size: 18px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .section h3 { color: #FFFFFF; font-size: 15px; margin: 16px 0 10px 0; }
   .section p { color: #CCCCEE; margin-bottom: 12px; font-size: 15px; }
   .section ul { padding-left: 20px; margin-bottom: 12px; }
   .section ul li { color: #CCCCEE; margin-bottom: 8px; font-size: 15px; }
   .section ul li strong { color: #FFFFFF; }
   .highlight { background: #1a1a3a; border-radius: 8px; padding: 14px 18px; margin: 12px 0; border: 1px solid #6C63FF33; }
   .highlight p { margin: 0; color: #9D97FF; font-size: 14px; }
+  .warn { background: #2a1a1a; border-left: 4px solid #FF5252; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .warn p { margin: 0; color: #FF8A80; font-size: 14px; }
   .badge { display: inline-block; background: #6C63FF22; color: #9D97FF; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 14px; border: 1px solid #6C63FF44; }
   .contact-box { background: linear-gradient(135deg, #13132A, #1a1a3a); border: 1px solid #6C63FF; border-radius: 12px; padding: 24px; text-align: center; margin-top: 32px; }
   .contact-box h3 { color: #FFFFFF; margin-bottom: 10px; }
@@ -34,7 +37,7 @@
 <div class="header">
   <div class="app-name">⚡ HTG TurboX</div>
   <h1>Privacy Policy</h1>
-  <div class="date">Last Updated: March 2026 &nbsp;|&nbsp; Effective Date: March 2026</div>
+  <div class="date">Last Updated: April 2026 &nbsp;|&nbsp; Effective Date: April 2026</div>
 </div>
 
 <div class="container">
@@ -50,145 +53,259 @@
   <div class="section">
     <h2>📊 Information We Collect</h2>
 
-    <p><strong style="color:#fff">1. Device Information (Processed Locally — Never Transmitted)</strong></p>
-    <p>The following device information is read by the App solely for the purpose of displaying statistics and optimization tips to you. This data is processed entirely on your device and is never stored persistently, transmitted to any server, or shared with any third party:</p>
+    <h3>1. Device Information (Processed Locally — Never Transmitted)</h3>
+    <p>The following device information is read by the App solely for the purpose of displaying statistics and providing optimization guidance. This data is processed entirely on your device and is never stored persistently, transmitted to any server, or shared with any third party:</p>
     <ul>
-      <li><strong>Device model, manufacturer, and Android version</strong> — used to show device-specific optimization instructions in the Tweaks section</li>
-      <li><strong>RAM usage and available memory</strong> — displayed in real-time on the home screen dashboard</li>
-      <li><strong>Storage capacity and free space</strong> — shown on the home screen dashboard</li>
-      <li><strong>Battery level, charging status, and battery temperature</strong> — displayed in the dashboard and used by the Temperature Monitor feature</li>
-      <li><strong>List of installed applications</strong> — used exclusively by the App Manager (to list user-installed apps for uninstallation) and the Game Booster (to detect installed games). This data never leaves your device.</li>
+      <li><strong>Device model, manufacturer, and Android version</strong> — used to show device-specific optimization instructions and hardware specifications</li>
+      <li><strong>RAM usage and available memory</strong> — displayed in real-time on the home screen dashboard and Game Toolbox overlay</li>
+      <li><strong>Storage capacity and free space</strong> — shown on the home screen and in the Storage Analyzer</li>
+      <li><strong>Battery level, charging status, and battery temperature</strong> — displayed in the dashboard, Game Toolbox overlay, and Temperature Monitor</li>
+      <li><strong>CPU and hardware information</strong> — displayed in the Device Specs screen</li>
+      <li><strong>Frame rate (FPS)</strong> — measured using Android's Choreographer API for the FPS counter in the Game Toolbox overlay</li>
     </ul>
 
-    <p><strong style="color:#fff">2. Engagement Points Data (Stored Locally on Your Device Only)</strong></p>
+    <h3>2. Installed Applications List (Processed Locally — Never Transmitted)</h3>
     <ul>
-      <li>Engagement point balance, daily earn count, and daily login bonus claim status are stored using Android SharedPreferences on your device only</li>
+      <li><strong>App Manager</strong> — lists user-installed apps for uninstallation via Android's standard system dialog</li>
+      <li><strong>Game Booster</strong> — detects installed games for the game launcher</li>
+      <li><strong>Storage Analyzer</strong> — shows installed apps sorted by size using StorageStatsManager</li>
+      <li><strong>Advanced Tweaks (Shizuku)</strong> — App Hibernation and Disable Bloatware features show app lists for user selection</li>
+      <li>The list of installed apps is never stored persistently, transmitted to any server, or shared with any third party</li>
+    </ul>
+
+    <h3>3. Media Files (Accessed Locally — Never Transmitted)</h3>
+    <ul>
+      <li>The Storage Analyzer reads photo, video, and audio file metadata (name, size, type) from Android MediaStore to display storage breakdown and find duplicate files</li>
+      <li>Files can be previewed in-app (photos via ImageView, videos via VideoView) and deleted via Android's standard system confirmation dialog (MediaStore.createDeleteRequest)</li>
+      <li>The App does not upload, copy, or transmit any media files to any server</li>
+      <li>Media access requires explicit user permission (READ_MEDIA_IMAGES, READ_MEDIA_VIDEO, READ_MEDIA_AUDIO on Android 13+)</li>
+    </ul>
+
+    <h3>4. Engagement Points Data (Stored Locally on Your Device Only)</h3>
+    <ul>
+      <li>Point balance, daily earn count, and daily bonus claim status are stored using Android SharedPreferences on your device only</li>
       <li>This data is never transmitted to any server — there is no backend, no database, and no user accounts</li>
       <li>Engagement points are purely cosmetic (badge milestones) and have no monetary value</li>
     </ul>
 
-    <p><strong style="color:#fff">3. App Preferences (Stored Locally)</strong></p>
+    <h3>5. App Preferences (Stored Locally)</h3>
     <ul>
-      <li>Gaming mode settings (Do Not Disturb toggle, screen-on preference) — stored locally via SharedPreferences</li>
-      <li>Manually added games list — stored on your device via SharedPreferences</li>
-      <li>Notification permission status and first-launch flags — stored locally via SharedPreferences</li>
+      <li>Gaming mode settings (DND, screen-on, rotation lock preferences)</li>
+      <li>Game Toolbox toggle state</li>
+      <li>Manually added games list</li>
+      <li>Notification permission and first-launch flags</li>
+      <li>All stored locally via SharedPreferences</li>
     </ul>
 
-    <p><strong style="color:#fff">4. Information We Do NOT Collect</strong></p>
+    <h3>6. Information We Do NOT Collect</h3>
     <ul>
       <li>We do <strong>not</strong> collect your name, email address, phone number, or any personal identifiers</li>
       <li>We do <strong>not</strong> collect location data (GPS, IP-based, or otherwise)</li>
       <li>We do <strong>not</strong> use analytics SDKs, crash reporting tools, or any server-side logging</li>
-      <li>We do <strong>not</strong> currently use any advertising SDKs or ad networks</li>
       <li>We do <strong>not</strong> track user behavior, usage patterns, or session data on any server</li>
-      <li>We do <strong>not</strong> access, read, or transmit the contents of any other app on your device</li>
-      <li>We do <strong>not</strong> access your contacts, call logs, SMS, camera, microphone, or files</li>
+      <li>We do <strong>not</strong> access your contacts, call logs, SMS, camera, or microphone</li>
+      <li>We do <strong>not</strong> read, modify, or transmit the contents of any other app's data</li>
     </ul>
   </div>
 
   <div class="section">
     <h2>🔧 App Permissions Explained</h2>
-    <p>HTG TurboX requests only the permissions necessary for its core features. Below is an explanation of each permission and why it is needed:</p>
+    <p>HTG TurboX requests only the permissions necessary for its features. Below is a complete explanation of each permission:</p>
+
+    <h3>Standard Permissions</h3>
     <ul>
-      <li><strong>INTERNET</strong> — Required for the Network Check feature, which performs ping tests to public servers (google.com, cloudflare.com, 8.8.8.8) to measure your connection quality. No personal data is transmitted during these tests.</li>
-      <li><strong>ACCESS_NETWORK_STATE</strong> — Checks whether the device has an active internet connection before running the Network Check feature. Does not collect or transmit any data.</li>
-      <li><strong>ACCESS_NOTIFICATION_POLICY</strong> — Enables the Do Not Disturb (DND) feature in the Game Booster. DND is only activated when the user explicitly enables it via a toggle and grants the required system permission. The App never activates DND without user consent.</li>
-      <li><strong>POST_NOTIFICATIONS</strong> (Android 13+) — Sends periodic informational reminders about checking device stats. Notifications are only sent after the user grants permission via Android's runtime permission dialog. Notifications can be disabled at any time via: <strong>Settings → Apps → HTG TurboX → Notifications → Turn Off</strong>.</li>
-      <li><strong>RECEIVE_BOOT_COMPLETED</strong> — Reschedules the notification reminder service (via Android WorkManager) after the device restarts, so periodic reminders continue working. No data is collected or transmitted at boot.</li>
-      <li><strong>QUERY_ALL_PACKAGES</strong> — Required on Android 11 and above to retrieve the list of installed applications. This permission is used solely for two features: (1) the App Manager, which displays user-installed apps and allows uninstallation via Android's standard system dialog, and (2) the Game Booster, which detects installed games to display them for quick launch. The list of installed apps is never stored persistently, transmitted to any server, or shared with any third party.</li>
+      <li><strong>INTERNET</strong> — Required for the Network Check feature (ping tests to google.com, cloudflare.com, 8.8.8.8). No personal data is transmitted.</li>
+      <li><strong>ACCESS_NETWORK_STATE</strong> — Checks whether the device has an active connection before running Network Check.</li>
+      <li><strong>ACCESS_NOTIFICATION_POLICY</strong> — Enables the Do Not Disturb (DND) feature in Game Booster and Game Toolbox. DND is only activated when the user explicitly enables it.</li>
+      <li><strong>POST_NOTIFICATIONS</strong> (Android 13+) — Sends periodic informational reminders about device stats. Can be disabled anytime via system settings.</li>
+      <li><strong>RECEIVE_BOOT_COMPLETED</strong> — Reschedules notification reminders after device restart via Android WorkManager.</li>
+      <li><strong>REQUEST_DELETE_PACKAGES</strong> — Used by the App Manager to open Android's standard uninstall confirmation dialog.</li>
+      <li><strong>QUERY_ALL_PACKAGES</strong> — Required on Android 11+ to discover installed apps for the Game Launcher and App Manager.</li>
     </ul>
-    <div class="highlight"><p>ℹ️ HTG TurboX does not request any permissions beyond those listed above. We follow the principle of minimum necessary permissions.</p></div>
+
+    <h3>Media Access Permissions</h3>
+    <ul>
+      <li><strong>READ_MEDIA_IMAGES</strong> (Android 13+) — Storage Analyzer reads photo metadata to display sizes and find duplicates.</li>
+      <li><strong>READ_MEDIA_VIDEO</strong> (Android 13+) — Storage Analyzer reads video metadata to display sizes and find duplicates.</li>
+      <li><strong>READ_MEDIA_AUDIO</strong> (Android 13+) — Storage Analyzer reads audio file metadata to display sizes.</li>
+      <li><strong>READ_EXTERNAL_STORAGE</strong> (Android 12 and below) — Legacy equivalent of the above media permissions for older Android versions.</li>
+    </ul>
+
+    <h3>System Settings Permissions</h3>
+    <ul>
+      <li><strong>WRITE_SETTINGS</strong> — Used by Game Booster to toggle rotation lock (ACCELEROMETER_ROTATION system setting). Requires the user to manually enable in system settings.</li>
+      <li><strong>SYSTEM_ALERT_WINDOW</strong> — Used by the Game Toolbox floating overlay to display stats, toggles, and the Boost button over games. Requires the user to manually enable "Display over other apps" in system settings. The overlay only starts when the user launches a game and has the feature toggled on.</li>
+    </ul>
+
+    <h3>Service Permissions</h3>
+    <ul>
+      <li><strong>FOREGROUND_SERVICE</strong> — Required to run the Game Toolbox overlay as a foreground service with a persistent notification.</li>
+      <li><strong>FOREGROUND_SERVICE_SPECIAL_USE</strong> (Android 14+) — Required to start the overlay foreground service on Android 14 and above. The service is declared with foregroundServiceType="specialUse" for the game overlay toolbox.</li>
+    </ul>
+
+    <div class="highlight"><p>ℹ️ HTG TurboX does not request any permissions beyond those listed above. Every permission is tied to a specific user-facing feature and is requested at runtime with clear explanation.</p></div>
   </div>
 
   <div class="section">
-    <h2>⭐ Engagement Points System &amp; Data</h2>
-    <p>HTG TurboX includes an engagement points system that allows users to earn points for using app features and unlock cosmetic badge milestones (Starter → Bronze → Silver → Gold → Diamond). Here is exactly how data is handled:</p>
+    <h2>🎮 Game Toolbox Overlay</h2>
+    <p>The Game Toolbox is an optional floating overlay that displays live stats (RAM, battery, temperature, FPS) and provides quick toggles (DND, rotation lock, FPS counter) while gaming.</p>
     <ul>
-      <li>All engagement data (point balance, daily counts, bonus claim status) is stored only on your device using Android SharedPreferences</li>
-      <li>No engagement data is transmitted to any server — there is no backend, no database, and no user accounts</li>
-      <li>Engagement points have no monetary value and cannot be exchanged, transferred, or redeemed for real-world goods, services, or currency</li>
-      <li>Points and badges are purely cosmetic gamification features designed for fun</li>
-      <li>All engagement data is permanently deleted if you clear the App's data or uninstall the App</li>
+      <li>The overlay requires SYSTEM_ALERT_WINDOW permission which the user must manually grant in system settings</li>
+      <li>The overlay only starts when the user launches a game through the App with the Game Toolbox toggle enabled</li>
+      <li>The overlay runs as a foreground service (GameToolboxService) with a persistent notification showing a "Stop" button</li>
+      <li>The overlay can be closed by dragging the floating icon to the ✕ close zone, tapping "Stop" in the notification, or disabling the toggle in the App</li>
+      <li>The overlay does not collect, store, or transmit any data. All stats are read from standard Android APIs and displayed in real-time</li>
+      <li>The "Boost" button clears only the App's own cache (cacheDir) and requests garbage collection (System.gc()). It does not modify any other app's data</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🗂️ Storage Analyzer</h2>
+    <p>The Storage Analyzer helps users understand and manage their device storage:</p>
+    <ul>
+      <li>Reads file metadata (name, size, type, date) from Android MediaStore — does not read file contents</li>
+      <li>Displays storage breakdown by category (Photos, Videos, Audio, APK Files, Other Files)</li>
+      <li>Detects duplicate files by matching exact byte size and MIME type (same approach as Google Files)</li>
+      <li>Provides in-app preview for photos (ImageView) and videos (VideoView)</li>
+      <li>File deletion uses Android's standard MediaStore.createDeleteRequest which shows a system confirmation dialog — files are only deleted after the user explicitly taps "Allow"</li>
+      <li>No files are uploaded, copied, or transmitted to any server</li>
+      <li>Supports multi-select via long-press for batch deletion</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🔑 Shizuku Integration (Optional Advanced Tweaks)</h2>
+    <p>HTG TurboX optionally integrates with Shizuku, a third-party open-source tool that enables ADB-level commands without root access. Shizuku is developed by Rikka (rikka.app) and is available on Google Play Store.</p>
+
+    <h3>How it works:</h3>
+    <ul>
+      <li>Shizuku is NOT bundled with HTG TurboX — the user must install it separately from Google Play Store</li>
+      <li>Shizuku must be started manually by the user via Wireless Debugging</li>
+      <li>HTG TurboX requests Shizuku permission via a standard permission dialog — the user must explicitly grant access</li>
+      <li>All Shizuku features are entirely optional — the App functions fully without Shizuku</li>
+    </ul>
+
+    <h3>What Shizuku-powered features do:</h3>
+    <ul>
+      <li><strong>Animation Speed</strong> — modifies window_animation_scale, transition_animation_scale, animator_duration_scale via "settings put global"</li>
+      <li><strong>Background Process Limit</strong> — modifies background_process_limit via "settings put global"</li>
+      <li><strong>Max Cached Processes</strong> — modifies activity_manager_constants via "settings put global"</li>
+      <li><strong>Performance Mode</strong> — sets power mode via "cmd power set-mode"</li>
+      <li><strong>Force GPU Rendering</strong> — modifies force_gpu_rendering via "settings put global"</li>
+      <li><strong>App Hibernation</strong> — force-stops user-selected apps via "am force-stop"</li>
+      <li><strong>Screen Density (DPI)</strong> — modifies display density via "wm density"</li>
+      <li><strong>Disable Bloatware</strong> — disables user-selected system apps via "pm disable-user" (fully reversible)</li>
+      <li><strong>WiFi Scan Throttling</strong> — modifies wifi_scan_always_enabled via "settings put global"</li>
+      <li><strong>Disable HW Overlay</strong> — modifies disable_overlay_optimization via "settings put global"</li>
+      <li><strong>Refresh Rate Control</strong> — modifies peak_refresh_rate via "settings put system"</li>
+      <li><strong>Clear All App Caches</strong> — runs "pm trim-caches" which is the same API Android Settings uses internally. Only clears cached data, never app data or user settings</li>
+    </ul>
+
+    <h3>What Shizuku features do NOT do:</h3>
+    <ul>
+      <li>Do not access, read, or modify any app's private data, files, or databases</li>
+      <li>Do not install or uninstall any app (pm install/uninstall is blocked)</li>
+      <li>Do not modify system partitions or kernel parameters</li>
+      <li>Do not access root (su) in any way</li>
+      <li>Do not transmit any data to any server</li>
+    </ul>
+
+    <p>All changes made by Shizuku features modify Android's system settings database, which persists after reboot. Users can undo all changes using the "Reset All Advanced Tweaks" button or by manually changing settings in Developer Options.</p>
+    <div class="highlight"><p>🔒 Shizuku integration is fully optional. Users who do not install or enable Shizuku can use all other App features without any limitation.</p></div>
+  </div>
+
+  <div class="section">
+    <h2>⚡ Module Flasher</h2>
+    <p>The Module Flasher allows users to load and execute .turbox module files — JSON configuration files containing predefined sets of system tweaks.</p>
+    <ul>
+      <li>Modules are JSON files that contain only whitelisted command types — no arbitrary shell execution is possible</li>
+      <li>All module commands are validated and sanitized at parse time before execution</li>
+      <li>Dangerous patterns (rm, su, chmod, mount, reboot, curl, etc.) are explicitly blocked at multiple validation layers</li>
+      <li>Module files are selected by the user from their device storage via Android's standard file picker</li>
+      <li>The App does not download, distribute, or auto-execute any modules — the user must manually select and confirm each flash</li>
+      <li>Module execution requires Shizuku to be installed, running, and granted permission</li>
+      <li>All module actions are the same whitelisted commands available in the Advanced Tweaks section</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>⭐ Engagement Points System</h2>
+    <p>HTG TurboX includes an engagement points system for cosmetic badge milestones (Starter → Bronze → Silver → Gold → Diamond):</p>
+    <ul>
+      <li>All data stored locally via SharedPreferences — no server, no backend, no user accounts</li>
+      <li>Points have no monetary value and cannot be exchanged or redeemed</li>
+      <li>All data is permanently deleted if you clear the App's data or uninstall</li>
     </ul>
   </div>
 
   <div class="section">
     <h2>🔔 Notifications</h2>
-    <p>HTG TurboX sends periodic local notifications with informational reminders to check your device stats. About these notifications:</p>
     <ul>
-      <li>All notifications are scheduled and delivered entirely on your device using Android WorkManager — no server is involved</li>
-      <li>Notifications are sent approximately every 8 hours when your phone is active</li>
-      <li>Notification content is informational only (e.g., "Tap to check your current RAM and storage usage") — notifications do not contain false claims, urgent warnings, or alarmist language</li>
-      <li>On Android 13 and above, explicit permission is requested before any notification is sent</li>
-      <li>You can disable notifications at any time: <strong>Settings → Apps → HTG TurboX → Notifications → Turn Off</strong></li>
-      <li>Tapping a notification opens the App to the home screen</li>
-      <li>No personal data is used to target, personalize, or customize notification content</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>👦 Children's Privacy</h2>
-    <p>HTG TurboX is not directed at children under the age of 13. We do not knowingly collect any personal information from children under 13. The App does not require account registration and does not collect personal identifiers from any user.</p>
-    <p>The App does not contain content inappropriate for children, but it is intended for general audiences aged 13 and above.</p>
-    <p>If you believe that a child under 13 has provided any personal information through the App, please contact us immediately at <a href="mailto:Krishnakantasharma297@gmail.com">Krishnakantasharma297@gmail.com</a> and we will take appropriate steps.</p>
-  </div>
-
-  <div class="section">
-    <h2>🌍 Data Storage and Security</h2>
-    <p>HTG TurboX does not operate any backend servers, cloud databases, or remote storage. All app data is stored exclusively on your device using Android's built-in secure storage mechanisms (SharedPreferences within the App's private sandbox).</p>
-    <p>No user data is transmitted internationally, stored outside your device, or accessible to other apps.</p>
-    <p>The only external network communication the App makes is:</p>
-    <ul>
-      <li><strong>Network ping tests</strong> — Standard ICMP/TCP reachability checks to google.com, cloudflare.com, and 8.8.8.8, initiated only when you manually use the Network Check feature. No personal data is included in these requests.</li>
+      <li>Periodic local notifications with informational reminders sent via Android WorkManager approximately every 4 hours</li>
+      <li>Content is informational only — no false claims, urgent warnings, or alarmist language</li>
+      <li>On Android 13+, explicit permission is requested before any notification is sent</li>
+      <li>Game Toolbox shows a persistent notification while active with a "Stop" button</li>
+      <li>You can disable all notifications: <strong>Settings → Apps → HTG TurboX → Notifications → Turn Off</strong></li>
     </ul>
   </div>
 
   <div class="section">
     <h2>🔗 Third-Party Services</h2>
-    <p>HTG TurboX does not currently integrate any third-party advertising SDKs, analytics platforms, crash reporting services, or user tracking services. The App operates as a fully self-contained local application.</p>
-    <p>The following Android platform components are used:</p>
+    <p>HTG TurboX integrates the following third-party components:</p>
     <ul>
-      <li><strong>AndroidX WorkManager</strong> — Android Jetpack library for scheduling periodic background tasks (notification reminders). Runs entirely on-device. No data collection. <a href="https://developer.android.com/topic/libraries/architecture/workmanager" target="_blank">Documentation →</a></li>
-      <li><strong>Android System APIs</strong> — ActivityManager (RAM stats), BatteryManager (battery info), StatFs (storage info), PackageManager (installed apps). All data stays on-device.</li>
+      <li><strong>Shizuku API</strong> (dev.rikka.shizuku) — Open-source library for executing ADB-level commands. Installed separately by the user from Google Play Store. <a href="https://shizuku.rikka.app/" target="_blank">shizuku.rikka.app</a></li>
+      <li><strong>AndroidX Libraries</strong> — Standard Android Jetpack libraries (Navigation, WorkManager, RecyclerView, AppCompat). Run entirely on-device. No data collection.</li>
+      <li><strong>Android System APIs</strong> — ActivityManager, BatteryManager, StorageStatsManager, MediaStore, PackageManager, Choreographer. All data stays on-device.</li>
     </ul>
-    <p>If third-party services (such as advertising SDKs) are integrated in future updates, this Privacy Policy will be updated accordingly before those changes take effect, and users will be notified through the App or via an updated version on the Google Play Store.</p>
+    <p>The App does not currently integrate any advertising SDKs, analytics platforms, or crash reporting services.</p>
+    <p>If third-party advertising or analytics services are integrated in future updates, this Privacy Policy will be updated accordingly before those changes take effect.</p>
+  </div>
+
+  <div class="section">
+    <h2>👦 Children's Privacy</h2>
+    <p>HTG TurboX is not directed at children under the age of 13. We do not knowingly collect any personal information from children under 13. The App does not require account registration and does not collect personal identifiers from any user.</p>
+    <p>If you believe that a child under 13 has provided personal information through the App, please contact us at <a href="mailto:Krishnakantasharma297@gmail.com">Krishnakantasharma297@gmail.com</a>.</p>
+  </div>
+
+  <div class="section">
+    <h2>🌍 Data Storage and Security</h2>
+    <p>HTG TurboX does not operate any backend servers, cloud databases, or remote storage. All app data is stored exclusively on your device using Android's built-in secure storage (SharedPreferences within the App's private sandbox).</p>
+    <p>The only external network communication the App makes is standard ping tests (ICMP/TCP) to google.com, cloudflare.com, and 8.8.8.8, initiated only when you manually use the Network Check feature.</p>
   </div>
 
   <div class="section">
     <h2>📱 Data Safety Summary</h2>
-    <p>This section summarizes the data practices of HTG TurboX in alignment with Google Play's Data Safety requirements:</p>
     <ul>
-      <li><strong>Data collected:</strong> None. No personal or sensitive user data is collected.</li>
+      <li><strong>Data collected:</strong> None. No personal or sensitive user data is collected or transmitted.</li>
       <li><strong>Data shared:</strong> None. No data is shared with third parties.</li>
       <li><strong>Data transmitted off-device:</strong> None (except network pings initiated by the user).</li>
-      <li><strong>Data encrypted:</strong> N/A — no data is transmitted.</li>
-      <li><strong>Data deletion:</strong> All data is stored locally and can be deleted by clearing the App's data or uninstalling the App.</li>
-      <li><strong>Security practices:</strong> All data stored within Android's private app sandbox (SharedPreferences), inaccessible to other apps.</li>
+      <li><strong>Data deletion:</strong> All data stored locally — delete by clearing App data or uninstalling.</li>
+      <li><strong>Security:</strong> All data stored within Android's private app sandbox, inaccessible to other apps.</li>
     </ul>
   </div>
 
   <div class="section">
     <h2>⚖️ Your Rights and Choices</h2>
-    <p>Because HTG TurboX stores all data locally on your device and does not transmit any data to servers, you have full control over your data at all times:</p>
     <ul>
-      <li><strong>Access your data</strong> — All data is on your device. Go to <strong>Settings → Apps → HTG TurboX → Storage</strong> to see storage usage.</li>
-      <li><strong>Delete your data</strong> — Go to <strong>Settings → Apps → HTG TurboX → Clear Data</strong>. This permanently resets all engagement points, preferences, and settings.</li>
-      <li><strong>Revoke permissions</strong> — Go to <strong>Settings → Apps → HTG TurboX → Permissions</strong> and revoke any permission at any time. The App will continue to function with reduced features.</li>
-      <li><strong>Disable notifications</strong> — Go to <strong>Settings → Apps → HTG TurboX → Notifications → Turn Off</strong>.</li>
-      <li><strong>Uninstall</strong> — Uninstalling the App removes all locally stored data permanently and completely.</li>
+      <li><strong>Access your data</strong> — All data is on your device: Settings → Apps → HTG TurboX → Storage</li>
+      <li><strong>Delete your data</strong> — Settings → Apps → HTG TurboX → Clear Data</li>
+      <li><strong>Revoke permissions</strong> — Settings → Apps → HTG TurboX → Permissions</li>
+      <li><strong>Disable notifications</strong> — Settings → Apps → HTG TurboX → Notifications → Turn Off</li>
+      <li><strong>Disable overlay</strong> — Settings → Apps → HTG TurboX → Display over other apps → Turn Off</li>
+      <li><strong>Revoke Shizuku</strong> — Open Shizuku app → revoke permission for HTG TurboX</li>
+      <li><strong>Reset Advanced Tweaks</strong> — Performance Tweaks → Reset All Advanced Tweaks</li>
+      <li><strong>Uninstall</strong> — removes all locally stored data permanently</li>
     </ul>
   </div>
 
   <div class="section">
     <h2>📝 Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last Updated" date at the top of this page. We encourage you to review this page periodically.</p>
-    <p>For material changes (such as the introduction of third-party SDKs or new data collection practices), we will make reasonable efforts to notify users through the App or via an updated version on the Google Play Store.</p>
-    <p>Continued use of the App after changes are posted constitutes your acceptance of the updated policy.</p>
+    <p>We may update this Privacy Policy from time to time. The "Last Updated" date will be revised accordingly. For material changes, we will notify users through the App or via an updated version on Google Play Store.</p>
+    <p>Continued use of the App after changes are posted constitutes acceptance of the updated policy.</p>
   </div>
 
   <div class="section">
     <h2>📬 Contact and Grievance Redressal</h2>
-    <p>For any questions, complaints, or concerns regarding this Privacy Policy or the App's data practices, please contact us. In accordance with the Information Technology Act 2000 and applicable rules, our grievance officer details are:</p>
     <ul>
       <li><strong>Developer:</strong> Hi Tech Gamerz</li>
       <li><strong>Grievance Officer:</strong> Krishna Kanta Sharma</li>
@@ -199,7 +316,7 @@
 
   <div class="contact-box">
     <h3>📬 Contact Us</h3>
-    <p style="color:#CCCCEE; margin:10px 0;">For any questions or concerns about this Privacy Policy:</p>
+    <p style="color:#CCCCEE; margin:10px 0;">For any questions about this Privacy Policy:</p>
     <p style="margin:6px 0;"><strong style="color:#fff">Email:</strong> <a href="mailto:Krishnakantasharma297@gmail.com">Krishnakantasharma297@gmail.com</a></p>
     <p style="margin:6px 0;"><strong style="color:#fff">YouTube:</strong> <a href="https://www.youtube.com/@hitechgamerzyt" target="_blank">Hi Tech Gamerz</a></p>
     <p style="margin:6px 0;"><strong style="color:#fff">Channel 2:</strong> <a href="https://youtube.com/@scriptotweaks" target="_blank">Scripto Tweaks</a></p>
@@ -210,7 +327,6 @@
     <p style="margin-top:6px;">HTG TurboX — Monitor. Optimize. Play.</p>
     <p style="margin-top:6px;"><a href="terms.html">Terms of Service</a></p>
   </div>
-
 </div>
 </body>
 </html>
