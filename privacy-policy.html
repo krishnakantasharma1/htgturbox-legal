@@ -73,22 +73,14 @@
       <li>The list of installed apps is never stored persistently, transmitted to any server, or shared with any third party</li>
     </ul>
 
-    <h3>3. Media Files (Accessed Locally — Never Transmitted)</h3>
-    <ul>
-      <li>The Storage Analyzer reads photo, video, and audio file metadata (name, size, type) from Android MediaStore to display storage breakdown and find duplicate files</li>
-      <li>Files can be previewed in-app (photos via ImageView, videos via VideoView) and deleted via Android's standard system confirmation dialog (MediaStore.createDeleteRequest)</li>
-      <li>The App does not upload, copy, or transmit any media files to any server</li>
-      <li>Media access requires explicit user permission (READ_MEDIA_IMAGES, READ_MEDIA_VIDEO, READ_MEDIA_AUDIO on Android 13+)</li>
-    </ul>
-
-    <h3>4. Engagement Points Data (Stored Locally on Your Device Only)</h3>
+    <h3>3. Engagement Points Data (Stored Locally on Your Device Only)</h3>
     <ul>
       <li>Point balance, daily earn count, and daily bonus claim status are stored using Android SharedPreferences on your device only</li>
       <li>This data is never transmitted to any server — there is no backend, no database, and no user accounts</li>
       <li>Engagement points are purely cosmetic (badge milestones) and have no monetary value</li>
     </ul>
 
-    <h3>5. App Preferences (Stored Locally)</h3>
+    <h3>4. App Preferences (Stored Locally)</h3>
     <ul>
       <li>Gaming mode settings (DND, screen-on, rotation lock preferences)</li>
       <li>Game Toolbox toggle state</li>
@@ -97,7 +89,7 @@
       <li>All stored locally via SharedPreferences</li>
     </ul>
 
-    <h3>6. Information We Do NOT Collect</h3>
+    <h3>5. Information We Do NOT Collect</h3>
     <ul>
       <li>We do <strong>not</strong> collect your name, email address, phone number, or any personal identifiers</li>
       <li>We do <strong>not</strong> collect location data (GPS, IP-based, or otherwise)</li>
@@ -121,14 +113,6 @@
       <li><strong>RECEIVE_BOOT_COMPLETED</strong> — Reschedules notification reminders after device restart via Android WorkManager.</li>
       <li><strong>REQUEST_DELETE_PACKAGES</strong> — Used by the App Manager to open Android's standard uninstall confirmation dialog.</li>
       <li><strong>QUERY_ALL_PACKAGES</strong> — Required on Android 11+ to discover installed apps for the Game Launcher and App Manager.</li>
-    </ul>
-
-    <h3>Media Access Permissions</h3>
-    <ul>
-      <li><strong>READ_MEDIA_IMAGES</strong> (Android 13+) — Storage Analyzer reads photo metadata to display sizes and find duplicates.</li>
-      <li><strong>READ_MEDIA_VIDEO</strong> (Android 13+) — Storage Analyzer reads video metadata to display sizes and find duplicates.</li>
-      <li><strong>READ_MEDIA_AUDIO</strong> (Android 13+) — Storage Analyzer reads audio file metadata to display sizes.</li>
-      <li><strong>READ_EXTERNAL_STORAGE</strong> (Android 12 and below) — Legacy equivalent of the above media permissions for older Android versions.</li>
     </ul>
 
     <h3>System Settings Permissions</h3>
@@ -161,15 +145,14 @@
 
   <div class="section">
     <h2>🗂️ Storage Analyzer</h2>
-    <p>The Storage Analyzer helps users understand and manage their device storage:</p>
+    <p>The Storage Analyzer helps users understand their device storage usage:</p>
     <ul>
-      <li>Reads file metadata (name, size, type, date) from Android MediaStore — does not read file contents</li>
-      <li>Displays storage breakdown by category (Photos, Videos, Audio, APK Files, Other Files)</li>
-      <li>Detects duplicate files by matching exact byte size and MIME type (same approach as Google Files)</li>
-      <li>Provides in-app preview for photos (ImageView) and videos (VideoView)</li>
-      <li>File deletion uses Android's standard MediaStore.createDeleteRequest which shows a system confirmation dialog — files are only deleted after the user explicitly taps "Allow"</li>
-      <li>No files are uploaded, copied, or transmitted to any server</li>
-      <li>Supports multi-select via long-press for batch deletion</li>
+      <li>Displays total, used, and free storage space using Android's StatFs API — no special permissions required</li>
+      <li>Shows installed apps sorted by size using StorageStatsManager — only reads app metadata (name, package, size), not app contents</li>
+      <li>Provides an "Info" button for each app that opens Android's standard App Info settings page</li>
+      <li>Links to Android Settings → Storage for detailed system storage management</li>
+      <li>No files are accessed, scanned, uploaded, or transmitted to any server</li>
+      <li>The Storage Analyzer does not access photos, videos, audio files, or any media on your device</li>
     </ul>
   </div>
 
@@ -255,7 +238,7 @@
     <ul>
       <li><strong>Shizuku API</strong> (dev.rikka.shizuku) — Open-source library for executing ADB-level commands. Installed separately by the user from Google Play Store. <a href="https://shizuku.rikka.app/" target="_blank">shizuku.rikka.app</a></li>
       <li><strong>AndroidX Libraries</strong> — Standard Android Jetpack libraries (Navigation, WorkManager, RecyclerView, AppCompat). Run entirely on-device. No data collection.</li>
-      <li><strong>Android System APIs</strong> — ActivityManager, BatteryManager, StorageStatsManager, MediaStore, PackageManager, Choreographer. All data stays on-device.</li>
+      <li><strong>Android System APIs</strong> — ActivityManager, BatteryManager, StorageStatsManager, PackageManager, Choreographer, StatFs. All data stays on-device.</li>
     </ul>
     <p>The App does not currently integrate any advertising SDKs, analytics platforms, or crash reporting services.</p>
     <p>If third-party advertising or analytics services are integrated in future updates, this Privacy Policy will be updated accordingly before those changes take effect.</p>
@@ -264,7 +247,7 @@
   <div class="section">
     <h2>👦 Children's Privacy</h2>
     <p>HTG TurboX is not directed at children under the age of 13. We do not knowingly collect any personal information from children under 13. The App does not require account registration and does not collect personal identifiers from any user.</p>
-    <p>If you believe that a child under 13 has provided personal information through the App, please contact us at <a href="mailto:Krishnakantasharma297@gmail.com">Krishnakantasharma297@gmail.com</a>.</p>
+    <p>If you believe that a child under 13 has provided personal information through the App, please contact us at <a href="/cdn-cgi/l/email-protection#501b223923383e313b313e2431233831223d3162696710373d31393c7e333f3d"><span class="__cf_email__" data-cfemail="19526b706a7177787278776d786a71786b74782b202e597e74787075377a7674">[email&#160;protected]</span></a>.</p>
   </div>
 
   <div class="section">
@@ -309,7 +292,7 @@
     <ul>
       <li><strong>Developer:</strong> Hi Tech Gamerz</li>
       <li><strong>Grievance Officer:</strong> Krishna Kanta Sharma</li>
-      <li><strong>Email:</strong> <a href="mailto:Krishnakantasharma297@gmail.com">Krishnakantasharma297@gmail.com</a></li>
+      <li><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#c08bb2a9b3a8aea1aba1aeb4a1b3a8a1b2ada1f2f9f780a7ada1a9aceea3afad"><span class="__cf_email__" data-cfemail="19526b706a7177787278776d786a71786b74782b202e597e74787075377a7674">[email&#160;protected]</span></a></li>
       <li><strong>Response Time:</strong> Within 7 working days</li>
     </ul>
   </div>
@@ -317,16 +300,5 @@
   <div class="contact-box">
     <h3>📬 Contact Us</h3>
     <p style="color:#CCCCEE; margin:10px 0;">For any questions about this Privacy Policy:</p>
-    <p style="margin:6px 0;"><strong style="color:#fff">Email:</strong> <a href="mailto:Krishnakantasharma297@gmail.com">Krishnakantasharma297@gmail.com</a></p>
-    <p style="margin:6px 0;"><strong style="color:#fff">YouTube:</strong> <a href="https://www.youtube.com/@hitechgamerzyt" target="_blank">Hi Tech Gamerz</a></p>
-    <p style="margin:6px 0;"><strong style="color:#fff">Channel 2:</strong> <a href="https://youtube.com/@scriptotweaks" target="_blank">Scripto Tweaks</a></p>
-  </div>
-
-  <div class="footer">
-    <p>© 2026 Hi Tech Gamerz. All rights reserved.</p>
-    <p style="margin-top:6px;">HTG TurboX — Monitor. Optimize. Play.</p>
-    <p style="margin-top:6px;"><a href="terms.html">Terms of Service</a></p>
-  </div>
-</div>
-</body>
-</html>
+    <p style="margin:6px 0;"><strong style="color:#fff">Email:</strong> <a href="/cdn-cgi/l/email-protection#fdb68f948e95939c969c93899c8e959c8f909ccfc4cabd9a909c9491d39e9290"><span class="__cf_email__" data-cfemail="78330a110b1016191319160c190b10190a15194a414f381f15191114561b1715">[email&#160;protected]</span></a></p>
+    <p style="margin:6px 0;"><strong style="color:#fff">YouTube:</strong> <a href="https://www.youtube.com/@hitechgamer
