@@ -71,6 +71,269 @@
 
     <h3>Storage Analyzer</h3>
     <ul>
+      <li><strong>Storage Overview</strong> — View total, used, and free storage space</li>
+      <li><strong>Largest Apps</strong> — View installed apps sorted by storage usage with quick access to app info</li>
+      <li><strong>Settings Link</strong> — Direct link to Android Settings → Storage for detailed management</li>
+    </ul>
+
+    <h3>App Manager</h3>
+    <ul>
+      <li>List user-installed apps and uninstall via Android's standard system dialog</li>
+    </ul>
+
+    <h3>Advanced Tweaks (Shizuku — Optional)</h3>
+    <ul>
+      <li><strong>Animation Speed</strong> — Disable or reduce system animations</li>
+      <li><strong>Background Process Limit</strong> — Limit background apps to free RAM</li>
+      <li><strong>Max Cached Processes</strong> — Control how many recent apps stay in RAM</li>
+      <li><strong>Performance Mode</strong> — Enable system performance mode on supported devices</li>
+      <li><strong>Force GPU Rendering</strong> — Hardware-accelerate all apps</li>
+      <li><strong>App Hibernation</strong> — Force-stop selected background apps</li>
+      <li><strong>Screen Density (DPI)</strong> — Change display density</li>
+      <li><strong>Disable Bloatware</strong> — Disable pre-installed apps without uninstalling</li>
+      <li><strong>WiFi Scan Throttling</strong> — Stop constant background WiFi scanning</li>
+      <li><strong>Disable HW Overlay</strong> — Force GPU composition</li>
+      <li><strong>Refresh Rate Control</strong> — Force 60/90/120Hz display refresh rate</li>
+      <li><strong>Clear All App Caches</strong> — Clear cached data for all apps safely</li>
+    </ul>
+
+    <h3>Module Flasher (Shizuku — Optional)</h3>
+    <ul>
+      <li>Load and execute .turbox module files containing preset configurations</li>
+      <li>Terminal-style interface showing command execution in real-time</li>
+    </ul>
+
+    <div class="highlight"><p>ℹ️ HTG TurboX is a monitoring, optimization guidance, and system settings utility. Advanced tweaks modify Android's standard system settings database via ADB-level commands — the same settings accessible through Developer Options. The App does not modify system partitions, access root, or perform kernel-level operations.</p></div>
+  </div>
+
+  <div class="section">
+    <h2>✅ Eligibility</h2>
+    <ul>
+      <li>You must be at least 13 years of age to use this App</li>
+      <li>If you are between 13 and 18, you must have parental or guardian consent</li>
+      <li>HTG TurboX does not require account registration</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>✅ Acceptable Use</h2>
+    <p>You agree NOT to:</p>
+    <ul>
+      <li>Reverse engineer, decompile, or derive source code from the App</li>
+      <li>Modify, adapt, or create derivative works based on the App</li>
+      <li>Use the App for any illegal or unauthorized purpose</li>
+      <li>Exploit bugs to artificially earn engagement points</li>
+      <li>Use automated scripts or bots to interact with the App</li>
+      <li>Create malicious .turbox module files designed to harm devices</li>
+      <li>Distribute .turbox module files containing misleading descriptions of their actions</li>
+      <li>Remove or alter proprietary notices or marks on the App</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🔑 Shizuku and Advanced Tweaks</h2>
+    <p>The Advanced Tweaks and Module Flasher features require Shizuku, a third-party tool available on Google Play Store. By using these features, you acknowledge and agree:</p>
+    <ul>
+      <li>Shizuku is a third-party application not developed by Hi Tech Gamerz — its use is governed by its own terms and privacy policy</li>
+      <li>You are responsible for installing, configuring, and maintaining Shizuku on your device</li>
+      <li>Advanced tweaks modify Android system settings that may affect device behavior, performance, or battery life</li>
+      <li>All tweaks are reversible using the "Reset All" button or by manually changing settings in Developer Options</li>
+      <li>The Developer is not responsible for any unintended effects caused by tweaks you choose to apply</li>
+      <li>Different devices and Android versions may respond differently to the same tweaks</li>
+      <li>You should understand what each tweak does before applying it — descriptions and recommendations are provided in the App</li>
+    </ul>
+    <div class="warn"><p>⚠️ Advanced tweaks modify real system settings. While all changes are reversible, applying extreme settings (such as "No background apps" or very low DPI) may temporarily affect device usability. Use the "Reset All" button if you experience any issues.</p></div>
+  </div>
+
+  <div class="section">
+    <h2>⚡ Module Flasher</h2>
+    <p>The Module Flasher executes .turbox module files selected by the user. By using this feature, you acknowledge:</p>
+    <ul>
+      <li>.turbox files are JSON configuration files that contain whitelisted commands only</li>
+      <li>The App validates and sanitizes all module commands before execution — dangerous operations are blocked</li>
+      <li>Modules created by third parties are the responsibility of their authors — the Developer does not review or endorse third-party modules</li>
+      <li>You should only flash modules from trusted sources (official HTG TurboX channels)</li>
+      <li>The "Reset to Stock" module or "Reset All" button can undo any module's changes</li>
+      <li>The Developer is not responsible for any issues caused by third-party modules</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🎮 Game Toolbox</h2>
+    <p>The Game Toolbox is a floating overlay service. By enabling it, you acknowledge:</p>
+    <ul>
+      <li>The overlay requires "Display over other apps" permission which you must manually grant</li>
+      <li>The overlay runs as a foreground service and shows a persistent notification</li>
+      <li>The overlay only starts when you launch a game with the feature toggled on</li>
+      <li>The "Boost" button performs minor cleanup (own app cache + garbage collection) — it does not modify other apps</li>
+      <li>FPS measurement uses Android's Choreographer API and may not reflect actual game FPS</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🗂️ Storage Analyzer</h2>
+    <p>By using the Storage Analyzer, you acknowledge:</p>
+    <ul>
+      <li>Storage statistics are derived from Android's StatFs and StorageStatsManager APIs and may vary slightly from values shown in Android Settings</li>
+      <li>App size information includes APK, data, and cache — actual storage freed after uninstalling may differ</li>
+      <li>The "Info" button opens Android's standard App Info page where you can clear cache, data, or uninstall</li>
+      <li>The Storage Analyzer does not access, scan, or delete any photos, videos, or files on your device</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>⭐ Engagement Points System</h2>
+    <ul>
+      <li>Points: +10 per feature use, +20 daily login bonus, 100/day cap</li>
+      <li>Badges: 🌟 Starter (0) → 🥉 Bronze (500) → 🥈 Silver (2000) → 🥇 Gold (5000) → 💎 Diamond (10000)</li>
+      <li>Points have <strong>no monetary value</strong> and cannot be transferred, sold, exchanged, or redeemed</li>
+      <li>Badges are purely cosmetic</li>
+      <li>Points stored locally — lost if you clear data or uninstall</li>
+      <li>The Developer may modify or discontinue the system at any time</li>
+    </ul>
+    <div class="warn"><p>⚠️ Any attempt to artificially inflate points through exploitation of bugs or automated tools will result in the point balance being reset.</p></div>
+  </div>
+
+  <div class="section">
+    <h2>⚙️ Features Disclaimer</h2>
+    <ul>
+      <li>All device statistics are derived from standard Android APIs and may not be 100% accurate on all devices</li>
+      <li>The App does not guarantee specific performance improvements, battery life extensions, or storage savings</li>
+      <li>Results vary based on device model, manufacturer, Android version, and installed apps</li>
+      <li>The "Phone Health Score" is a simplified estimate, not a comprehensive diagnostic</li>
+      <li>Advanced Tweaks modify real system settings — the Developer provides descriptions and recommendations but is not responsible for unintended effects</li>
+      <li>The Game Toolbox FPS counter measures frame callbacks, not actual in-game rendering FPS</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🛡️ Disclaimer of Warranties</h2>
+    <p>HTG TurboX is provided "AS IS" and "AS AVAILABLE" without warranties of any kind, including merchantability, fitness for a particular purpose, non-infringement, uninterrupted or error-free operation, accuracy of statistics, or compatibility with all devices.</p>
+  </div>
+
+  <div class="section">
+    <h2>⚖️ Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law, Hi Tech Gamerz shall not be liable for any indirect, incidental, special, consequential, or punitive damages including loss of data, device malfunction, or performance issues resulting from using the App, applying tweaks, flashing modules, or modifying device settings. Total liability shall not exceed INR 0 (zero) as the App is provided free of charge.</p>
+  </div>
+
+  <div class="section">
+    <h2>📄 Intellectual Property</h2>
+    <p>All content, design, code, graphics, branding, and the .turbox module format are the exclusive intellectual property of Hi Tech Gamerz. You may not reproduce, distribute, or create derivative works without written permission.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔗 Third-Party Services</h2>
+    <ul>
+      <li><strong>Shizuku</strong> (rikka.app) — Third-party ADB bridge, installed separately by user</li>
+      <li><strong>AndroidX Libraries</strong> — Standard Jetpack libraries, on-device only</li>
+      <li><strong>Network Check pings</strong> — google.com, cloudflare.com, 8.8.8.8 (no personal data transmitted)</li>
+    </ul>
+    <p>If advertising or analytics services are integrated in future updates, these Terms will be updated accordingly.</p>
+  </div>
+
+  <div class="section">
+    <h2>🌍 Governing Law</h2>
+    <p>These Terms are governed by the laws of India. Disputes shall be subject to the exclusive jurisdiction of courts in India.</p>
+  </div>
+
+  <div class="section">
+    <h2>✏️ Changes to Terms</h2>
+    <p>We may modify these Terms at any time. Continued use after changes constitutes acceptance. For material changes, we will notify users through the App or Play Store.</p>
+  </div>
+
+  <div class="section">
+    <h2>📱 Google Play Store</h2>
+    <p>If downloaded from Google Play, your use is also subject to <a href="https://play.google.com/about/play-terms/" target="_blank">Google Play's Terms of Service</a>. In case of conflict, Google Play's Terms prevail.</p>
+  </div>
+
+  <div class="section">
+    <h2>📬 Contact and Grievance Redressal</h2>
+    <ul>
+      <li><strong>Developer:</strong> Hi Tech Gamerz</li>
+      <li><strong>Grievance Officer:</strong> Krishna Kanta Sharma</li>
+      <li><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#87ccf5eef4efe9e6ece6e9f3e6f4efe6f5eae6b5beb0c7e0eae6eeeba9e4e8ea"><span class="__cf_email__" data-cfemail="78330a110b1016191319160c190b10190a15194a414f381f15191114561b1715">[email&#160;protected]</span></a></li>
+      <li><strong>Response Time:</strong> Within 7 working days</li>
+    </ul>
+  </div>
+
+  <div class="contact-box">
+    <h3>📬 Get in Touch</h3>
+    <p style="color:#CCCCEE; margin:10px 0;">Questions about these Terms:</p>
+    <p style="margin:6px 0;"><strong style="color:#fff">Email:</strong> <a href="/cdn-cgi/l/email-protection#662d140f150e08070d07081207150e07140b07545f5126010b070f0a4805090b"><span class="__cf_email__" data-cfemail="9fd4edf6ecf7f1fef4fef1ebfeecf7feedf2feada6a8dff8f2fef6f3b1fcf0f2">[email&#160;protected]</span></a></p>
+    <p style="margin:6px 0;"><strong style="color:#fff">YouTube:</strong> <a href="https://www.youtube.com/@hitechgamerzyt" target="_blank">Hi Tech Gamerz</a></p>
+    <p style="margin:6px 0;"><strong style="color:#fff">Channel 2:</strong> <a href="https://youtube.com/@scriptotweaks" t<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — HTG TurboX</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0D0D1A; color: #CCCCEE; line-height: 1.8; }
+  .header { background: linear-gradient(135deg, #13132A, #1a1a3a); padding: 40px 20px; text-align: center; border-bottom: 2px solid #6C63FF; }
+  .header h1 { color: #FFFFFF; font-size: 28px; margin-bottom: 8px; }
+  .header .app-name { color: #6C63FF; font-size: 18px; font-weight: 600; }
+  .header .date { color: #666688; font-size: 14px; margin-top: 8px; }
+  .container { max-width: 860px; margin: 0 auto; padding: 40px 20px; }
+  .section { background: #13132A; border-radius: 12px; padding: 28px; margin-bottom: 24px; border-left: 4px solid #6C63FF; }
+  .section h2 { color: #FFFFFF; font-size: 18px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .section h3 { color: #FFFFFF; font-size: 15px; margin: 16px 0 10px 0; }
+  .section p { color: #CCCCEE; margin-bottom: 12px; font-size: 15px; }
+  .section ul { padding-left: 20px; margin-bottom: 12px; }
+  .section ul li { color: #CCCCEE; margin-bottom: 8px; font-size: 15px; }
+  .section ul li strong { color: #FFFFFF; }
+  .highlight { background: #1a1a3a; border-radius: 8px; padding: 14px 18px; margin: 12px 0; border: 1px solid #6C63FF33; }
+  .highlight p { margin: 0; color: #9D97FF; font-size: 14px; }
+  .warn { background: #2a1a1a; border-left: 4px solid #FF5252; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+  .warn p { margin: 0; color: #FF8A80; font-size: 14px; }
+  .badge { display: inline-block; background: #6C63FF22; color: #9D97FF; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 14px; border: 1px solid #6C63FF44; }
+  .contact-box { background: linear-gradient(135deg, #13132A, #1a1a3a); border: 1px solid #6C63FF; border-radius: 12px; padding: 24px; text-align: center; margin-top: 32px; }
+  .contact-box h3 { color: #FFFFFF; margin-bottom: 10px; }
+  .contact-box a { color: #6C63FF; text-decoration: none; }
+  .footer { text-align: center; padding: 30px 20px; color: #666688; font-size: 13px; border-top: 1px solid #13132A; margin-top: 20px; }
+  a { color: #6C63FF; }
+  @media (max-width: 600px) { .header h1 { font-size: 22px; } .section { padding: 20px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="app-name">⚡ HTG TurboX</div>
+  <h1>Terms of Service</h1>
+  <div class="date">Last Updated: April 2026 &nbsp;|&nbsp; Effective Date: April 2026</div>
+</div>
+
+<div class="container">
+
+  <div class="section">
+    <div class="badge">PLEASE READ CAREFULLY</div>
+    <h2>📋 Agreement to Terms</h2>
+    <p>These Terms of Service ("Terms") govern your use of the HTG TurboX mobile application ("App"), developed and operated by Hi Tech Gamerz ("we", "our", "us", "Developer").</p>
+    <p>By downloading, installing, or using HTG TurboX, you confirm that you have read, understood, and agree to be bound by these Terms and our <a href="privacy-policy.html">Privacy Policy</a>. If you do not agree to these Terms, do not download or use the App.</p>
+  </div>
+
+  <div class="section">
+    <h2>📱 Description of the App</h2>
+    <p>HTG TurboX is a free Android gaming utility and device optimization application. The App provides:</p>
+
+    <h3>Core Features (no special permissions required)</h3>
+    <ul>
+      <li><strong>Home Dashboard</strong> — Real-time RAM, storage, battery, and temperature monitoring with health score</li>
+      <li><strong>Device Specs</strong> — Detailed hardware information with copy-to-clipboard</li>
+      <li><strong>Network Check</strong> — Ping tests, DNS resolution, connection type, and link speed</li>
+      <li><strong>Performance Tweaks</strong> — Device-specific guides to Developer Options and system settings</li>
+      <li><strong>Engagement Points</strong> — Cosmetic gamification with badge milestones</li>
+    </ul>
+
+    <h3>Game Booster Features</h3>
+    <ul>
+      <li><strong>Game Launcher</strong> — Detect and quick-launch installed games</li>
+      <li><strong>Gaming Mode</strong> — DND toggle, screen-on toggle, rotation lock toggle</li>
+      <li><strong>Game Toolbox</strong> — Floating overlay with live stats (RAM, battery, temperature, FPS), quick toggles, and Boost button</li>
+    </ul>
+
+    <h3>Storage Analyzer</h3>
+    <ul>
       <li><strong>Storage Breakdown</strong> — View files by category (Photos, Videos, Audio, APK, Other) sorted by size</li>
       <li><strong>Duplicate Detection</strong> — Find duplicate files by matching exact byte size and MIME type</li>
       <li><strong>Multi-Select Deletion</strong> — Long-press to select multiple files for batch deletion via system confirmation</li>
